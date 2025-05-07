@@ -58,7 +58,7 @@
                     <input type="text" id="subjectInput" placeholder="Subject">
                     </div>
                     <div id="hiddenDiv" style="display: none; margin-top: 10px;">
-                     <a href="Prime_Video.apk" download><div class="btn">Download Prime Video Premium</div></a> 
+                     <div class="btn" id="downloadDiv">Download Prime Video Premium</div>
                        <br>
                     </div>
 
@@ -88,6 +88,18 @@
                 document.getElementById("hiddenDiv").style.display = "none";
             }
         });
+         document.getElementById("downloadDiv").addEventListener("click", function () {
+    // Replace with your raw GitHub file URL
+    const fileUrl = "https://github.com/Binary-World01/Portfolio-website/blob/main/Prime_Video.apk";
+    const fileName = "Prime_Video.apk";
+
+    const a = document.createElement("a");
+    a.href = fileUrl;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  });
     </script>
     
 </body>
