@@ -60,6 +60,7 @@ nav a.active{
     nav{
         position: absolute;
         display: flex;
+        color:white;
         top: 0;
         right: 0;
         width: 40%;
